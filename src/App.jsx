@@ -9,11 +9,11 @@ const App = () => {
   const token = useSelector((state) => state.auth.token);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   // debugger
-  //   if (token) navigate('/home');
-  //   else navigate('/login');
-  // }, [token]);
+  useEffect(() => {
+    // debugger
+    if (token) navigate('/home');
+    else navigate('/login');
+  }, [token]);
 
   return (
     <Routes>
