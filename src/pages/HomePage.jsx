@@ -9,6 +9,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 console.log(user)
   const handleLogout = () => {
+    debugger
     dispatch(logout());
     navigate('/login');
   };

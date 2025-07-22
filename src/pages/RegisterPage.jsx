@@ -12,7 +12,7 @@ const RegisterPage = () => {
 
   const onSubmit = async (data) => {
     const formData = new FormData();
-
+debugger
     Object.entries(data).forEach(([key, value]) => {
       if (key === 'profile_image') {
         formData.append(key, value[0]);
