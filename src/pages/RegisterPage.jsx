@@ -35,15 +35,7 @@ debugger
       alert('Registration error. Check console.');
     }
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-teal-400 flex justify-center items-center px-4">
-      <div className="bg-white shadow-2xl rounded-xl p-8 w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Registration Form</h2>
-
-        <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data" className="space-y-4">
-
-          {[
+  const label=[
             { label: "User Type ID", name: "user_type_id", type: "number" },
             { label: "Full Name", name: "name", type: "text" },
             { label: "Mobile", name: "mobile", type: "text" },
@@ -53,7 +45,16 @@ debugger
             { label: "PAN No", name: "pan_no", type: "text" },
             { label: "Location ID", name: "location_id", type: "number" },
             { label: "Login Via (ANDROID/IOS)", name: "login_via", type: "text" },
-          ].map(({ label, name, type }) => (
+          ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-teal-400 flex justify-center items-center px-4">
+      <div className="bg-white shadow-2xl rounded-xl p-8 w-full max-w-md">
+        <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Registration Form</h2>
+
+        <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data" className="space-y-4">
+
+          {label?.map(({ label, name, type }) => (
             <div key={name}>
               <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
               <input
